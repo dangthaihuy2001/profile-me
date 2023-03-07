@@ -51,6 +51,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     perspective: 20px;
+   
 }
 
 header {
@@ -101,7 +102,7 @@ main>div:first-child::after {
     z-index: 1;
 }
 
-.img_introduce>div>img {
+.img_introduce>div:first-child>img {
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 12mm 11mm #000);
@@ -113,6 +114,7 @@ main>div:first-child::after {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .img_introduce>div:first-child {
@@ -157,9 +159,8 @@ img {
 
 .name {
     font-family: 'Tilt Warp', cursive;
-    color: black;
     font-size: 60px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     letter-spacing: 0;
     text-shadow: 0 0 80px rgba(255, 255, 255, 0);
@@ -343,7 +344,105 @@ main .screen-width:first-child::before {
 .duty div:nth-child(2){
     color: black;
 }
+.img_circle{
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+.img_circle:first-child{
 
+    width: 100px;
+    height: 100px;
+}
+.img_circle:nth-child(2){
+    width: 60px;
+    height: 60px;
+}
+.img_circle:nth-child(3){
+    width: 100px;
+    height: 100px;
+}
+.img_circle:nth-child(4){
+    width: 60px;
+    height: 60px;
+    animation: chuyendongcircle 30s 1s infinite ease;
+}
+.img_circle:nth-child(5){
+    width: 100px;
+    height: 100px;
+    animation: chuyendongcircle 30s infinite ease;
+}
+.div_dircle{
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    animation: xoay 30s infinite ease;
+}
+@keyframes chuyendongcircle {
+    0%{
+        top: 50%;
+        left: 50%;
+    }
+    10%{
+        top: 0%;
+        left: 50%;
+        transform: rotate(0deg);
+    }
+    40%{
+        top: 0%;
+        left: 50%;
+        transform: rotate(-180deg);
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+        
+    }
+    60%{
+        top: 0%;
+        left: 50%;
+        transform: rotate(-180deg);
+    }
+    90%{
+        top: 0%;
+        left: 50%;
+        transform: rotate(-360deg);
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+    }
+}
+@keyframes xoay {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: rotate(180deg);
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 @media(max-width:1024px) {
     header{
         width: 97%;
