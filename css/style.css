@@ -57,7 +57,7 @@ p {
 
 header {
     padding: 10px 0;
-    border-bottom: 1px solid #fd595677;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.322);
 }
 
 header span {
@@ -76,7 +76,7 @@ main>div:first-child {
 }
 
 main>div:first-child::after {
-    content: "Huy";
+    content: "Dưa";
     position: absolute;
     top: 0;
     left: 0;
@@ -645,4 +645,18 @@ main{
     .description_duty {
         width: 100%;
     }
+    .skill{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px;
+    }
+    .item_skill{
+        margin-bottom: 8px;
+    }
+}
+footer{
+    border-top: 1px solid rgba(128, 128, 128, 0.322);
+}
+footer .screen-width{
+    padding: 10px 0;
+    text-align: center;
 }
